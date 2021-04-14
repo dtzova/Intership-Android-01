@@ -1,14 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FourthActivity">
+    android:orientation="vertical"
+    android:padding="25dp">
 
-    <!-- TODO: Update blank fragment layout -->
+
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        android:layout_gravity="center"
+        android:text="Кнопка 'Приборы' отображает приборы"/>
+
+    <CheckBox
+        android:id="@+id/cb_fittings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Приборы"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"/>
+
+    <CheckBox
+        android:id="@+id/cb_radio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Включить радио"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"/>
+
+    <CheckBox
+        android:id="@+id/cb_slider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Включить ползунок"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"/>
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical">
 
-</FrameLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:textSize="10dp"
+            android:layout_gravity="center"
+            android:text="Выбрать вариант по радио"/>
+            
+            <RadioButton style="@style/RadioButton"
+                android:text="Вариант 1"/>
+
+            <RadioButton style="@style/RadioButton"
+                android:text="Вариант 2"/>
+
+            <RadioButton style="@style/RadioButton"
+                android:text="Вариант 3"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:textSize="10dp"
+                android:layout_gravity="center"
+                android:text="Выбрать вариант ползунком"/>
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

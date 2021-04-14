@@ -13,32 +13,38 @@ import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupActionBarWithNavController
+import com.example.helloworld.databinding.FragmentFirstActivityBinding
 
 class FirstActivity : Fragment() {
 
+    private var _binding: FragmentFirstActivityBinding? = null
+    private val binding get() = _binding!!
+
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_first_activity, container, false)
+        _binding = FragmentFirstActivityBinding.inflate(inflater, container, false)
+        val view = binding.root
+        return view
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        val btnOne : Button = view.findViewById(R.id.button_one)
-
-        btnOne.setOnClickListener{
+        binding.buttonOne.setOnClickListener {
             findNavController().navigate(R.id.action_firstActivity_to_secondActivity)
         }
 
-        val btnTwo : Button = view.findViewById(R.id.button_two)
+      binding.buttonTwo.setOnClickListener{
+          findNavController().navigate(R.id.action_firstActivity_to_thirdActivity)
+      }
 
-        btnTwo.setOnClickListener{
-            findNavController().navigate(R.id.action_firstActivity_to_thirdActivity)
-        }
-
-        val btnThree : Button = view.findViewById(R.id.button_three)
-
-        btnThree.setOnClickListener{
+        binding.buttonThree.setOnClickListener {
             findNavController().navigate(R.id.action_firstActivity_to_fourthActivity)
         }
     }

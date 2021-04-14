@@ -7,22 +7,10 @@
     <string name="text_button_one">Кнопки и табуретки</string>
     <string name="text_button_two">Поля выпаса ввода</string>
     <string name="text_button_three">Четбокс на радио</string>
+    <string name="submit">submit</string>
+    <string name="sn_st">Однострочный текст</string>
+    <string name="ml_st">Текст на 5 строк</string>
+    <string name="second_activity_title">Кнопка плюс добавляет новую кнопку в контейнер наверху</string>
+    <string name="second_activity_button">Кнопка номер раз</string>
 
-    <style name="Button">
-        <item name="android:layout_width">250dp</item>
-        <item name="android:layout_height">50dp</item>
-        <item name="android:layout_gravity">center_horizontal</item>
-        <item name="android:textAllCaps">false</item>
-    </style>
-
-    <style name="TextView">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_gravity">center_horizontal</item>
-        <item name="android:layout_marginTop">20dp</item>
-        <item name="android:textSize">30sp</item>
-        <item name="android:textColor">@color/black</item>
-        <item name="android:textStyle">bold</item>
-
-    </style>
 </resources>
